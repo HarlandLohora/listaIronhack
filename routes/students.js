@@ -38,7 +38,7 @@ router.get('/allStudents', ( req,res,next ) => {
 
 router.get('/:id', ( req,res,next ) => {
   let { id, name } = req.params;
-  
+
   Student.findOne({ _id: id})
   .then( student => {
     res.render('student', {student})
